@@ -1,0 +1,18 @@
+#include "stadfx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	float a,b,c,i;
+	cout<<"Digite el capital\n";
+	cin>>a;
+	cout<<"Digite tasa de interes\n";
+	cin>>b;
+	cout<<"Digite lapso de pago en dias\n";
+	cin>>c;
+	i=(a*b*c)/365;
+	cout<<"el valor del interes simple es"<<i;
+	getch();
+}
