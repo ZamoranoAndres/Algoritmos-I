@@ -5,7 +5,8 @@ using namespace std;
 
 void main()
 {
-	int i,s=0,A[30],n;
+	int i,n;
+	float A[30],s=0;
 	cout<<"Digite el numero de terminos\n";
 	cin>>n;
 	for(i=0;i<n;i++)
