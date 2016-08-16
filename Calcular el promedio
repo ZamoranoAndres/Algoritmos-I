@@ -1,0 +1,31 @@
+#include "stadfx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	float x,y,D,Dx,Dy,a,b,c,d,e,f;
+	cout<<"Digite valor de A\n";
+	cin>>a;
+	cout<<"Digite valor de B\n";
+	cin>>b;
+	cout<<"Digite valor de C\n";
+	cin>>c;
+	cout<<"Digite valor de D\n";
+	cin>>d;
+	cout<<"Digite valor de E\n";
+	cin>>e;
+	cout<<"Digite valor de F\n";
+	cin>>f;
+	D=(a*e)-(d*b);
+	Dx=(b*f)-(c*e);
+	Dy=(a*f)-(c*d);
+	x=Dx/D;
+	y=Dy/D;
+
+
+	cout<<"el valor de x es "<<x;
+	cout<<"el valor de y es "<<y;
+	getch();
+}
