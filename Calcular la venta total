@@ -1,0 +1,23 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	int cantidad[30],i,n;
+	float s=0, precio[30];
+	cout<<"Digite el numero de productos\n";
+	cin>>n;
+	for(i=0;i<n;i++)
+	{
+		cout<<"Digite la cantidad del producto "<<i+1<<endl;
+		cin>>cantidad[i];
+		cout<<"Digite el precio del producto "<<i+1<<endl;
+		cin>>precio[i];
+		s=s+(cantidad[i]*precio[i]);
+	}
+
+	cout<<"el total es "<<s;
+	getch();
+}
