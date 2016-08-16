@@ -1,0 +1,20 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	int i,s=0,A[30],n;
+	cout<<"Digite el numero de terminos\n";
+	cin>>n;
+	for(i=0;i<n;i++)
+	{
+		cout<<"Digite el termino:"<<i+1<<":";
+		cin>>A[i];
+		s=s+A[i];
+	}
+	cout<<" el promedio es:"<<s/n;
+	getch();
+	
+}
