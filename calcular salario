@@ -1,0 +1,28 @@
+#include "conio.h"
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	int i,n;
+	float salariobruto[20],descuento[20],salarioneto,d;
+	cout<<"Introduzca el numero de empleados";
+	cin>>n;
+	for(i=0;i<n;i++)
+	{
+		do{
+		cout<<"Introduzca el salario del empleado "<<i+1<<endl;
+		cin>>salariobruto[i];
+		if(salariobruto[i]<1805)
+		{
+			cout<<"ha introducido un salario inaceptable";
+		}
+		}while(salariobruto[i]<1805);
+		cout<<"Introduzca el descuento para el empleado "<<i+1<<endl;
+		cin>>descuento[i];
+		d=descuento[i]/100;
+		salarioneto=salariobruto[i]-salariobruto[i]*d;
+
+	}
+	cout<<"el salario neto es "<<salarioneto;
+}
