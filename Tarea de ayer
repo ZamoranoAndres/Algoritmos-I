@@ -1,0 +1,99 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+
+void cargar(int vec[],int &n,int &g)
+{
+	int i;
+	cout<<"Cantidad de elementos: "<<endl;
+	cin>>n;
+	for(i=0;i<n;i++)
+	{
+		cout<<endl;
+		cout<<"digite termino "<<i+1<<endl;
+		cin>>vec[i];
+	}
+	g=1;
+}
+void mostrar(int vec[], int n)
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+		cout<<vec[i]<<"  ";
+	}
+}
+void menu()
+{
+	cout<<"\t\t\t\tM E N U "<<endl<<endl<<endl;
+	cout<<"1.- Cargar el vector"<<endl;
+	cout<<"2.- Mostrar el vector"<<endl;
+	cout<<"3.- Contar elementos del vector"<<endl;
+	cout<<"0.- Salir"<<endl<<endl;
+	cout<<"Opcion: ";
+}
+void contar(int vec[],int n,int &N,int &P, int &C)
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+		if(vec[i]>0)
+		{
+			P++;
+		}
+		else{
+			if(vec[i]<0)
+			{
+				N++;
+			}
+			else
+			{
+				C++;
+			}
+		}
+	}
+}
+void main()
+{
+	int vec[30],op,g=0,n,N=0,P=0,C=0;
+
+	do{
+		system("cls");
+		menu();
+		cin>>op;
+		switch(op)
+		{
+		case 1:cargar(vec,n,g);
+			break;
+		case 2:if(g==1)
+			   {
+				   cout<<endl;
+				   mostrar(vec,n);
+				   getch();
+			   }
+			   else 
+			   {
+				   cout<<endl<<"NO SE HA CARGADO EL VECTOR";
+				   getch();
+			   }
+			   break;
+		case 3:if(g==1)
+			   {
+				   contar(vec,n,N,P,C);
+				   cout<<" Enteros positivos: "<<P<<endl;
+				   cout<<" Enteros negativos: "<<N<<endl;
+				   cout<<" Numero de ceros: "<<C<<endl;
+				   getch();
+			   }
+			   else
+			   {
+				   cout<<endl<<"NO SE HA CARGADO EL VECTOR";
+				   getch();
+			   }
+		}
+	}while(op!=0);
+	cout<<"CHAU";
+	getch();
+
+}
