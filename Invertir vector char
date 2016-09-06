@@ -20,7 +20,7 @@ int main()
 		  system("cls");
 	  }
    } while (total<=0 || total>tam);
-   cin.ignore();
+   cin.ignore(); //ingnora lo anterior 
    for (int i = 0; i < total; i++)
    {
       cout << "Ingrese el " << i + 1 << " nombre: ";
