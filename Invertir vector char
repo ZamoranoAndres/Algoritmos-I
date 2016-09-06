@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
    int total;
-   string nombres[tam], nombre, apellido, continuar;
+   string nombres[tam], nombre, apellido, continuar,otrovector[tam];
    unsigned int encontro;
    do{
       cout << "ingrese el numero de nombres: ";
@@ -20,7 +20,7 @@ int main()
 		  system("cls");
 	  }
    } while (total<=0 || total>tam);
-   cin.ignore(); //ingnora lo anterior 
+   cin.ignore();
    for (int i = 0; i < total; i++)
    {
       cout << "Ingrese el " << i + 1 << " nombre: ";
@@ -35,8 +35,8 @@ int main()
            nombre = nombres[i].substr(0, encontro);
            apellido = nombres[i].substr(encontro + 1,
            nombres[i].length());
-           cout << apellido << ", ";
-           cout << nombre << endl;
+		   otrovector[i]=apellido +" , "+ nombre;
+           cout << otrovector[i]<<endl;
        }
      }
     system("pause");
